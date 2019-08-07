@@ -1,1 +1,1 @@
-# Easthetic-Website-
+# Aesthetic-Website-
