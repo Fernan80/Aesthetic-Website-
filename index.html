@@ -3,9 +3,8 @@
 use the fill bar class-->
 <html lang="en">
 
-<!-- Great stuff my dude!-->
-<!-- Got your git hub working with your macbook and personal PC! -->
-<!--Glad it works-->
+<!--  Here we have a vaporwave themed website-->
+
 
 <head>
     <title>VAPORWAVE_TV</title>
@@ -80,6 +79,7 @@ use the fill bar class-->
         step = 0;
         steps = can.width + 50;
         RunTextLeftToRight();
+       
     }
 
     function RunTextLeftToRight() {
@@ -95,7 +95,90 @@ use the fill bar class-->
             var t = setTimeout('RunTextLeftToRight()', delay);
     }
 </script>
+<!-- /////////////////  Clock ////////////////-->
+<head>
+    <style>
+    .clockStyle {
+        background-color:#000;
+        border:#999 2px inset;
+        padding:6px;
+        margin:1px;
+        color:#0FF;
+        font-family:"Arial Black", Gadget, sans-serif;
+        font-size:20px;
+        font-weight:bold;
+        letter-spacing: 2px;
+        display:inline;
+        bottom: 0;
+        right:0;
+        
+    }
+    </style>
+    </head>
+    <body>
+    <div id="clockDisplay" class="clockStyle"></div>
+    <script>
 
+    function renderTime() {
+
+        var currentTime = new Date();
+        var diem = "AM";
+        var h = currentTime.getHours();
+        var m = currentTime.getMinutes();
+        var s = currentTime.getSeconds();
+        setTimeout('renderTime()',1000);
+        if (h == 0) {
+            h = 12;
+        } else if (h > 12) { 
+            h = h - 12;
+            diem="PM";
+        }
+        if (h < 10) {
+            h = "0" + h;
+        }
+        if (m < 10) {
+            m = "0" + m;
+        }
+        if (s < 10) {
+            s = "0" + s;
+        }
+        var myClock = document.getElementById('clockDisplay');
+        myClock.textContent = h + ":" + m + ":" + s + " " + diem;
+        myClock.innerText = h + ":" + m + ":" + s + " " + diem;
+        myClock.style.position = "fixed";
+        
+        
+      
+    }
+    renderTime();
+ 
+
+    </script>
+
+<!--gifs
+
+    <div class="tenor-gif-embed" data-postid="12287020" data-share-method="host" data-width="100%" data-aspect-ratio="1.7785714285714287"><a href="https://tenor.com/view/1986-vapor-wave-retro-retrowave-gif-12287020">1986 Vapor GIF</a> from <a href="https://tenor.com/search/1986-gifs">1986 GIFs</a></div><script type="text/javascript" async src="https://tenor.com/embed.js"></script>    
+        <script> 
+            .tenor-gif-embed{
+            background-color:#000;
+            border:#999 2px inset;
+            padding:6px;
+            margin:1px;
+            color:#0FF;
+            font-family:"Arial Black", Gadget, sans-serif;
+            font-size:20px;
+            font-weight:bold;
+            letter-spacing: 2px;
+            display:inline;
+            bottom: 0;
+            right:0;
+            }
+        </script>
+    </div> -->
+    </body>
+    </html>
+
+<!-- Pa-->
 </head>
 <body onload="init();">
 <div class="subdiv">
